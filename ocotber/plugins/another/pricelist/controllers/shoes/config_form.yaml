@@ -1,0 +1,10 @@
+name: Shoes
+form: $/another/pricelist/models/shoes/fields.yaml
+modelClass: Another\PriceList\Models\Shoes
+defaultRedirect: another/pricelist/shoes
+create:
+    redirect: 'another/pricelist/shoes/update/:id'
+    redirectClose: another/pricelist/shoes
+update:
+    redirect: another/pricelist/shoes
+    redirectClose: another/pricelist/shoes

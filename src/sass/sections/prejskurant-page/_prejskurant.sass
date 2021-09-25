@@ -1,0 +1,213 @@
+.prejskurant
+  width: 100%
+  margin-top: 6%
+  margin-bottom: 8%
+  display: flex
+  justify-content: center
+
+  &__items
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 0% 3% 0% 3%
+
+  &__item
+    +col
+    +size(6)
+    +size-md(7)
+    +size-sm(10)
+    +size-xs(12)
+
+  button
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 2px solid #f0ecec
+    transition: border 400ms ease
+    color: $main
+    font-size: 1.4em
+    padding-top: 22px
+    padding-bottom: 22px
+    +md(font-size, 1.2em)
+    +sm(font-size, 1.1em)
+    +sm(padding, 17px 0)
+    +xs(font-size, 1em)
+
+
+    &:hover
+      border-color: $main
+
+    &:hover > img
+      filter: saturate(20)
+
+    img
+      max-width: 42px
+      transition: all .4s
+
+
+.modal-container
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 1043
+  width: 100%
+  height: 100%
+  background-color: rgba(255, 255, 255, .9)
+  transition: all 0.7s
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  overflow-y: auto
+
+.pre-popup
+  width: 100%
+  max-width: 1260px
+  box-shadow: 0 2px 45px 7px rgba(204,204,204,0.64)
+  background: #FFF
+  padding: 25px 30px
+  margin: 20px auto
+  position: relative
+  z-index: 1044
+  +sm(padding, 25px 0)
+  +sm(height, auto)
+  +sm(overflow-x, hidden)
+
+  .btn-close
+    position: absolute
+    top: 10px
+    right: 15px
+    font-size: 30px
+    color: $main
+    opacity: .7
+    transition: opacity .3s
+
+    &:hover
+      opacity: 1
+
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-top: 20px
+
+  &__photo
+    +col
+    +size(4)
+    +size-sm(12)
+    text-align: center
+    position: sticky
+    top: 30px
+    +sm(position, initial)
+
+    h3
+      display: inline
+      text-transform: uppercase
+      padding-bottom: 3px
+
+    //&:hover > .mes
+    //    opacity: 1
+
+    img
+      +sm(margin, 0 auto)
+      +sm(max-width, 50%)
+
+  &__table
+    +col
+    +size(8)
+    +size-sm(12)
+    margin-bottom: 1em
+
+    .tablepress
+      width: 100%
+      margin: 0
+
+      th, td
+        padding: 15px 1.5vw
+        border-bottom: 1px solid #ddd
+        text-align: center
+        background: 0 0
+        font-size: 13px
+        font-weight: 400
+        line-height: 1.3
+        color: $main
+        +xs(font-size, 12px)
+
+      tfoot th, thead th
+        font-weight: 700
+        font-size: 13px
+        line-height: 1.3
+        color: #6b7993
+
+      thead th
+        border-bottom: 1px solid #ddd
+      th
+        position: relative
+      tr
+        transition: background-color .3s
+
+        &:hover
+          background-color: #F8F8F8
+
+    .column-2, th.column-2,
+    .column-3, th.column-3
+      color: $main!important
+    .column-4, th.column-4
+      color: #f27caa!important
+    .column-5, th.column-5
+      color: $blue!important
+    .column-1
+      text-align: left!important
+
+  .mes
+    display: inline-block
+    position: absolute
+    top: 40px
+    left: 120px
+    opacity: 0
+    font-size: 0.7em
+    width: 200px
+    color: $main
+    font-weight: 400
+    line-height: 1.4
+    transition: all 0.15s ease
+    padding: 10px
+    border-radius: 5px
+    border: 1px solid #ddd
+    box-shadow: 2px 2px 2px #ddd
+    background-color: #fff
+    text-transform: lowercase
+    +sm(left, 25px)
+
+.tab-mes
+    position: absolute
+    top: 0
+    left: auto
+    display: inline-block
+    font-size: 0.9em
+    color: $main
+    font-weight: 400
+    line-height: 1.4
+    transition: all 0.15s ease
+    padding: 10px
+    border-radius: 5px
+    border: 1px solid #ddd
+    box-shadow: 2px 2px 2px #ddd
+    background-color: #fff
+    text-transform: lowercase
+    z-index: 1
+    width: 190px
+    opacity: 0
+    pointer-events: none
+    text-align: center
+    +md(width, auto)
+
+.dotted:hover > .mes
+  opacity: 1
+.dotted:hover > .tab-mes
+  opacity: 1

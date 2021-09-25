@@ -1,0 +1,63 @@
+title = "Бонусная программа | Химчистка LaVanda"
+url = "/bonusnaya-programma"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeTitle[uk] = "Бонусна програма | Хімчистка LaVanda"
+localeUrl[uk] = "/bonusna-programa"
+==
+<section class="main bonus" style='; background-image: url({{"/assets/img/bonusnaya-programma-page/bg-bonusy.jpg"|theme }})'>
+    <div class="container">
+        <div class="main__content">
+            <div class="main__inner" style='background-image: url({{"/assets/img/flowers-bg-01.png"|theme }})' data-aos="zoom-in" data-aos-duration="1500">
+                <a href="{{ 'main'|page }}">
+                    <img class="logo-head" src={{"/assets/img/logo.svg"|theme }} alt="logo">
+                </a>
+                <h1>{{ 'БОНУСЫ' |_ }}</h1>
+                
+                {% partial 'modal-btn' %}
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bonus-programma">
+    <div class="bonus-programma__text">
+        <p>{{ 'Мы стараемся при любых условиях выполнять свою работу на самом высоком уровне и ценим труд наших мастеров.
+            Именно поэтому у нас нет сезонных скидок на наши услуги.' |_ }}</p>
+        <p>{{ 'Прежде всего мы стремимся отблагодарить наших заказчиков безупречным качеством выполняемых работ, а также
+            <span>системой скидок для постоянных клиентов.</span>' |_ }}</p>
+    </div>
+    <div class="bonus-programma__more-orders">
+        <h4>{{ 'Больше заказов - больше экономия!' |_ }}</h4>
+        <p>{{ '<span>Наша бонусная программа</span> предусматривает постепенное увеличение скидки (до максимального размера в <span>20%</span>) с увеличением общей суммы Ваших заказов.' |_ }}</p>
+    </div>
+    <div class="bonus-programma__cards" data-aos="zoom-in" data-aos-duration="800">
+        <img src={{"/assets/img/bonusnaya-programma-page/bonus-cards.png"|theme }} alt="bonus-cards">
+    </div>
+    <div class="bonus-programma__discount">
+        <div class="bonus-programma__discount--imgs">
+            <div class="img-box">
+                <img src={{"/assets/img/bonusnaya-programma-page/10-vids.svg"|theme }} alt="10%" data-aos="zoom-in" data-aos-duration="800">
+                <h4></h4>
+            </div>
+            <div class="img-box">
+                <img src={{"/assets/img/bonusnaya-programma-page/15-vids.svg"|theme }} alt="15%" data-aos="zoom-out" data-aos-duration="900">
+                <h4></h4>
+            </div>
+            <div class="img-box">
+                <img src={{"/assets/img/bonusnaya-programma-page/20-vids.svg"|theme }} alt="20%" data-aos="zoom-in" data-aos-duration="1000">
+                <h4></h4>
+            </div>
+        </div>
+        <p>{{ 'Однако у нас есть специальная скидка и <span>для новых клиентов</span>, которые оценили наш сервис и решили обратиться к нам повторно.' |_ }}</p>
+        <div class="spec">
+            <img src={{"/assets/img/bonusnaya-programma-page/5-vids.svg"|theme }} alt="5%" data-aos="zoom-in" data-aos-duration="800">
+        </div>
+        <h4>{{ 'Стоимость уменьшается, а качество остается неизменным!' |_ }}</h4>
+    </div>
+</section>

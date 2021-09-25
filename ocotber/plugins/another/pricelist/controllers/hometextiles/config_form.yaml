@@ -1,0 +1,10 @@
+name: HomeTextiles
+form: $/another/pricelist/models/hometextiles/fields.yaml
+modelClass: Another\PriceList\Models\HomeTextiles
+defaultRedirect: another/pricelist/hometextiles
+create:
+    redirect: 'another/pricelist/hometextiles/update/:id'
+    redirectClose: another/pricelist/hometextiles
+update:
+    redirect: another/pricelist/hometextiles
+    redirectClose: another/pricelist/hometextiles

@@ -1,0 +1,43 @@
+description = "Default layout"
+
+[localePicker]
+forceUrl = 1
+
+[contenteditor]
+
+[SeoCmsPage]
+==
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ this.page.title }}</title>
+    <link rel="shortcut icon" href={{"/assets/img/favicon.ico"|theme }}>
+    <link rel="apple-touch-icon" href={{"/assets/img/mstile-150x150.png"|theme }}>
+    <meta name="description" content="Широкий спектр услуг самого высокого уровня по чистке и реставрации вещей">
+    <meta name="keywords"
+          content="химчистка, Запорожье, Энергодар, Лаванда, LaVanda, чистка, вещи, ремонт вещей, реставрация сумок, чистка обуви, стирка белья">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+	<body>
+	
+	{% partial 'header' %}
+
+		{% page %}
+
+
+    {% partial 'footer' %}
+    {% partial 'btn-to-top' %}
+    {% partial 'modal' %}
+    
+        <!-- Scripts -->
+        <script src="{{ 'assets/js/libs.js'|theme }}"></script>
+        <script src="{{ 'assets/js/app.js'|theme }}"></script>
+        
+		{% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

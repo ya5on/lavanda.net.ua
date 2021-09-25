@@ -1,0 +1,10 @@
+name: Accessories
+form: $/another/pricelist/models/accessories/fields.yaml
+modelClass: Another\PriceList\Models\Accessories
+defaultRedirect: another/pricelist/accessories
+create:
+    redirect: 'another/pricelist/accessories/update/:id'
+    redirectClose: another/pricelist/accessories
+update:
+    redirect: another/pricelist/accessories
+    redirectClose: another/pricelist/accessories

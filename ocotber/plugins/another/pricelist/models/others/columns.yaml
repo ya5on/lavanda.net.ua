@@ -1,0 +1,56 @@
+columns:
+    parent_id:
+        label: par_id
+    cat_parent_id:
+        label: cat_id
+    title_ru:
+        label: назв_ру
+        type: text
+        searchable: true
+        sortable: true
+    title_uk:
+        label: назв_укр
+        type: text
+        searchable: true
+        sortable: true
+    text:
+        label: вес
+        type: text
+        searchable: true
+        sortable: true
+    price_kiev_1:
+        label: цена_киев_Ткстл
+        type: number
+        sortable: true
+    price_kiev_2:
+        label: цена_киев_Шелк
+        type: number
+        sortable: true
+    price_kiev_3:
+        label: цена_киев_Кож/Мех
+        type: number
+        sortable: true
+    price_zaporozhe_1:
+        label: цена_зпрж_Ткстл
+        type: number
+        sortable: true
+    price_zaporozhe_2:
+        label: цена_зпрж_Шелк
+        type: number
+        sortable: true
+    price_zaporozhe_3:
+        label: цена_зпрж_Кож/Мех
+        type: number
+        sortable: true
+    price_energodar_1:
+        label: цена_ен-р_Ткстль
+        type: number
+        sortable: true
+    price_energodar_2:
+        label: цена_ен-р_Шелк
+        type: number
+        sortable: true
+    price_energodar_3:
+        label: цена_ен-р_Кож/Мех
+        type: number
+        sortable: true

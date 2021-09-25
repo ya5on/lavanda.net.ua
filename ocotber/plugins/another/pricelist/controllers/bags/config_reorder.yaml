@@ -1,0 +1,4 @@
+title: Bags
+modelClass: Another\PriceList\Models\Bags
+toolbar:
+    buttons: reorder_toolbar

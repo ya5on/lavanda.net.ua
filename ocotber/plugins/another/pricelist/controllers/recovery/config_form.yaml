@@ -1,0 +1,10 @@
+name: Recovery
+form: $/another/pricelist/models/recovery/fields.yaml
+modelClass: Another\PriceList\Models\Recovery
+defaultRedirect: another/pricelist/recovery
+create:
+    redirect: 'another/pricelist/recovery/update/:id'
+    redirectClose: another/pricelist/recovery
+update:
+    redirect: another/pricelist/recovery
+    redirectClose: another/pricelist/recovery

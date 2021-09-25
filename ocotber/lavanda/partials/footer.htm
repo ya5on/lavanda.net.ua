@@ -1,0 +1,29 @@
+==
+<footer class="footer">
+        <div class="footer__content">
+            <div class="footer__content--logo">
+                <a href="{{ 'main'|page }}">
+                    <img src={{"/assets/img/logo.png"|theme }} alt="logo">
+                </a>
+            </div>
+            <div class="footer__content--nav">
+                <a href="{{ 'main'|page }}" {% if this.page.id == 'main' %}class="active"{% endif %}>{{ 'ГЛАВНАЯ' |_}}</a>
+                <a href="{{ 'servisy'|page }}" {% if this.page.id == 'servisy' %}class="active"{% endif %}>{{ 'СЕРВИСЫ' |_}}</a>
+                <a href="{{ 'prejskurant'|page }}" {% if this.page.id == 'prejskurant' %}class="active"{% endif %}>{{ 'ПРЕЙСКУРАНТ' |_}}</a>
+                <a href="{{ 'bonusnaya-programma'|page }}" {% if this.page.id == 'bonusnaya-programma' %}class="active"{% endif %}>{{ 'БОНУСНАЯ ПРОГРАММА' |_}}</a>
+                <a href="{{ 'kontakty'|page }}" {% if this.page.id == 'kontakty' %}class="active"{% endif %}>{{ 'КОНТАКТЫ' |_}}</a>
+            </div>
+            <div class="footer__content--social">
+                <a target="_blank" href="https://www.facebook.com/LaVandaPerfect" title="Facebook">
+                    <img src={{"/assets/img/facebook.png"|theme }} alt="facebook">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/lavandaperfect/" title="Instagram">
+                    <img src={{"/assets/img/instagram.png"|theme }} alt="instagram">
+                </a>
+            </div>
+        </div>
+        <!-- <p class="footer__copyright">&copy;
+            <script>document.write(new Date().getFullYear());</script>
+        </p> -->
+ 
+</footer>

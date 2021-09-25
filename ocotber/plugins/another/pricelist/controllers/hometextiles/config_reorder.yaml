@@ -1,0 +1,4 @@
+title: HomeTextiles
+modelClass: Another\PriceList\Models\HomeTextiles
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,68 @@
+.footer
+  background-color: #f2f2f2
+  margin: 0 auto
+
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    padding: 50px 100px
+    +sm(flex-direction, column)
+    +lg(padding, 50px 30px)
+    +md(padding, 30px)
+
+    &--logo
+      margin: 15px 20px 20px
+      filter: grayscale(55%)
+      transition: all .9s
+
+      &:hover
+        filter: grayscale(0)
+        transform: scale(1.1)
+
+      img
+        max-height: 30px
+        +md(max-height, 20px)
+
+    &--nav
+      display: flex
+      +sm(flex-direction, column)
+      +sm(text-align, center)
+      a
+        color: $main
+        font-size: 13px
+        font-weight: bolder
+        letter-spacing: 1px
+        margin: 10px
+        padding-right: 10px
+        padding-left: 10px
+        text-decoration: none
+        transition: all .3s
+        +lg(font-size, 12px)
+        +md(font-size, 11px)
+        +md(margin, 10px 2px)
+
+        &:hover
+          color: $blue
+
+      .active
+        color: $pink
+
+    &--social
+      display: flex
+
+      a
+        margin: 1vh
+
+      img
+        width: 32px
+        filter: grayscale(75%)
+        transition: all .9s
+        +md(width, 22px)
+
+        &:hover,
+        &:focus
+          filter: grayscale(0)
+          transform: scale(1.1)
+

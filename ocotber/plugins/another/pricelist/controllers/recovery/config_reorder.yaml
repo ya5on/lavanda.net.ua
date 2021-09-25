@@ -1,0 +1,4 @@
+title: Recovery
+modelClass: Another\PriceList\Models\Recovery
+toolbar:
+    buttons: reorder_toolbar

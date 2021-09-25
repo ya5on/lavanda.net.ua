@@ -1,0 +1,10 @@
+name: Discounts
+form: $/another/pricelist/models/discounts/fields.yaml
+modelClass: Another\PriceList\Models\Discounts
+defaultRedirect: another/pricelist/discounts
+create:
+    redirect: 'another/pricelist/discounts/update/:id'
+    redirectClose: another/pricelist/discounts
+update:
+    redirect: another/pricelist/discounts
+    redirectClose: another/pricelist/discounts

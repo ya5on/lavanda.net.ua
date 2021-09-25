@@ -1,0 +1,10 @@
+columns:
+    price_edit_kiev:
+        label: '+/- цены Киев'
+        type: number
+    price_edit_zaporozhe:
+        label: '+/- цены Запорожье'
+        type: number
+    price_edit_energodar:
+        label: '+/- цены Энергодар'
+        type: number

@@ -1,0 +1,4 @@
+title: Discounts
+modelClass: Another\PriceList\Models\Discounts
+toolbar:
+    buttons: reorder_toolbar

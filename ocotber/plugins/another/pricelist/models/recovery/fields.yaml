@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  parent_id:
+    label: ид родительской категории
+  cat_parent_id:
+    label: ид дочерней категории
+  title_ru:
+    label: Название_рус
+  title_uk:
+    label: Название_укр
+  text:
+    label: вес, размер и т.д.
+  price_kiev_1:
+    label: цена_киев
+  price_zaporozhe_1:
+    label: цена_запорожье
+  price_energodar_1:
+    label: цена_енергодар

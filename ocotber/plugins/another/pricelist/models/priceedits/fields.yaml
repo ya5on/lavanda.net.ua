@@ -1,0 +1,11 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  price_edit_kiev:
+    label: +/- цены Киев
+  price_edit_zaporozhe:
+    label: +/- цены Запорожье
+  price_edit_energodar:
+    label: +/- цены Энергодар

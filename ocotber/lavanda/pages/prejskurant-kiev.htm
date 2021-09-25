@@ -1,0 +1,387 @@
+title = "Прейскурант Киев | Химчистка LaVanda"
+url = "/prejskurant-kiev"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeTitle[uk] = "Прейскурант Київ | Хімчистка LaVanda"
+localeUrl[uk] = "/prejskurant-kiyiv"
+
+[clothes]
+
+[shoes]
+
+[bags]
+
+[accessories]
+
+[hometextiles]
+
+[recovery]
+
+[others]
+
+[discounts]
+==
+<section class="main" style='background-image: url({{"/assets/img/prejskurant-page/bg-price-3.jpg"|theme }})'>
+    <div class="container">
+        <div class="main__content">
+            <div class="main__inner" style='background-image: url({{"/assets/img/flowers-bg-01.png"|theme }})'  data-aos="zoom-in" data-aos-duration="1500">
+                <a href="{{ 'main'|page }}">
+                    <img class="logo-head" src={{"/assets/img/logo.svg"|theme }} alt="logo">
+                </a>
+                <h1>{{ 'ПРЕЙСКУРАНТ КИЕВ' |_ }}</h1>
+
+                {% partial 'modal-btn' %}
+    
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="prejskurant">
+
+    <div class="container-min">
+
+        <div class="prejskurant__items">
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                <button class="-a">{{ 'Чистка одежды' |_ }} <img src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }}
+                        alt="icon"></button>
+            </div>
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <button class="-b">{{ 'Чистка обуви' |_ }} <img src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }}
+                                                                   alt="icon"></button>
+            </div>
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                <button class="-c">{{ 'Чистка сумок' |_ }} <img src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }}
+                                                                   alt="icon"></button>
+            </div>
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                <button class="-d">{{ 'Чистка аксессуаров' |_ }} <img src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }}
+                                                                         alt="icon"></button>
+            </div>
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+                <button class="-e">{{ 'Чистка домашнего текстиля' |_ }} <img
+                        src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }} alt="icon"></button>
+            </div>
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+                <button class="-f">{{ 'Реставрация и ремонт' |_ }} <img
+                        src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }} alt="icon"></button>
+            </div>
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
+                <button class="-g">{{ 'Отдельные услуги' |_ }} <img src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }}
+                                                                       alt="icon"></button>
+            </div>
+            <div class="prejskurant__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
+                <button class="-j">{{ 'Скидки и наценки' |_ }} <img src={{"/assets/img/prejskurant-page/icon-plus.svg"|theme }}
+                                                                       alt="icon"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal-container hidden" id="modal-a">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3 class="dotted">{{ 'Чистка одежды' |_ }}
+                <div class="mes">
+                {{ 'указаны цены в гривнах для одежды, длиной до 90 см' |_ }}
+                </div>
+                </h3>
+            
+                <img src={{"/assets/img/prejskurant-page/1price-dress-400.jpg"|theme }} alt="dress">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-1" class="tablepress" role="grid">
+
+                    {% partial 'thead' %}
+                    {% set foo = 10 %}
+
+                    <tbody>
+                    {% for item in clothes.getClothes %}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">{% if activeLocale == 'ru' %}{{ item.title_ru}}{% endif %}{% if activeLocale == 'uk' %}{{ item.title_uk }}{% endif %}</td>
+                        <td class="column-2"></td>
+                        <td class="column-3">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-4">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' )}}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-5">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-container hidden" id="modal-b">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3>{{ 'Чистка обуви' |_ }}</h3>
+                <img src={{"/assets/img/prejskurant-page/2price-shoes.jpg"|theme }} alt="shoes">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-2" class="tablepress" role="grid">
+
+                    {% partial 'thead' %}
+
+                    <tbody>
+                    {% for item in shoes.getShoes %}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">{% if activeLocale == 'ru' %}{{ item.title_ru }}{% endif %}{% if activeLocale == 'uk' %}{{ item.title_uk }}{% endif %}</td>
+                        <td class="column-2"></td>
+                        <td class="column-3">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-4">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-5">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-container hidden" id="modal-c">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3>{{ 'Чистка сумок' |_ }}</h3>
+                <img src={{"/assets/img/prejskurant-page/3price-bag-400.jpg"|theme }} alt="bag">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-3" class="tablepress" role="grid">
+
+                    {% partial 'thead' %}
+
+                    <tbody>
+                    {% for item in bags.getBags %}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">{% if activeLocale == 'ru' %}{{ item.title_ru }}{% endif %}{% if activeLocale == 'uk' %}{{ item.title_uk }}{% endif %}</td>
+                        <td class="column-2"></td>
+                        <td class="column-3">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-4">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-5">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-container hidden" id="modal-d">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3>{{ 'Чистка аксессуаров' |_ }}</h3>
+                <img src={{"/assets/img/prejskurant-page/4price-acce-400.jpg"|theme }} alt="acce">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-4" class="tablepress" role="grid">
+
+                    {% partial 'thead' %}
+
+                    <tbody>
+                    {% for item in accessories.getAccessories %}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">{% if activeLocale == 'ru' %}{{ item.title_ru }}{% endif %}{% if activeLocale == 'uk' %}{{ item.title_uk }}{% endif %}</td>
+                        <td class="column-2"></td>
+                        <td class="column-3">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-4">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-5">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-container hidden" id="modal-e">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3>{{ 'Чистка домашнего текстиля' |_ }}</h3>
+                <img src={{"/assets/img/prejskurant-page/5price-homejpg.jpg"|theme }} alt="homejpg">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-5" class="tablepress">
+
+                    {% partial 'thead' %}
+
+                    <tbody>
+                    {% for item in hometextiles.getHometextiles%}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">
+                        {% if activeLocale == 'ru' %} 
+                            {% if item.cat_parent_id == 100  %}
+                                <div  class="dotted" style="margin-left: -15px!important; font-weight: 700">
+                                    {{ item.title_ru }}
+                                    <div class="tab-mes">{{ 'минимальный заказ 10 кг' |_ }}</div>
+                                </div>
+                                
+                            {% elseif item.parent_id == 10 %} 
+                                <div style="margin-left: -15px!important; font-weight: 700">{{ item.title_ru }}</div>
+                            {% else %}
+                                {{ item.title_ru }} 
+                            {% endif %} 
+                        {% endif %} 
+                        {% if activeLocale == 'uk' %} 
+                            {% if item.cat_parent_id == 100  %}
+                                <div  class="dotted" style="margin-left: -15px!important; font-weight: 700">
+                                    {{ item.title_uk }}
+                                    <div class="tab-mes">{{ 'минимальный заказ 10 кг' |_ }}</div>
+                                </div>
+                            {% elseif item.parent_id == 10 %} 
+                                <div style="margin-left: -15px!important; font-weight: 700">{{ item.title_uk }}</div>
+                            {% else %}
+                                {{ item.title_uk }} 
+                            {% endif %} 
+                        {% endif %}</td>
+                        
+                        <td class="column-2">
+                            {{ item.text }}
+                        </td>
+                        <td class="column-3">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_1 >= 1 %}{{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }} {% endif %}{% endif %} {% if this.page.id == 'prejskurant-kiyiv' %} {% if item.price_kiev_1 >= 1 %} {{ item.price_kiev_1 | price_kiev | number_format(0, '', ' ' ) }} {% endif %} {% endif %}</td>
+                        <td class="column-4">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                        <td class="column-5">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 | price_kiev | number_format(0, '', ' ' ) }}{% endif %}{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-container hidden" id="modal-f">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3 class="dotted">{{ 'Реставрация и ремонт' |_ }}
+                <div class="mes">
+                {{ 'указанные цены не включают стоимость фурнитуры и материалов' |_ }}
+                </div>
+                </h3>
+                
+                <img src={{"/assets/img/prejskurant-page/6price-repair-400.jpg"|theme }} alt="repair">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-6" class="tablepress">
+
+                    <tbody>
+                    {% for item in recovery.getRecovery%}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">{% if activeLocale == 'ru' %} {% if item.parent_id == 10 %}<b style="margin-left: -15px!important;">{{ item.title_ru }}</b>{% else %} {{ item.title_ru }} {% endif %} {% endif %} {% if activeLocale == 'uk' %} {% if item.parent_id == 10 %}<b style="margin-left: -15px!important;">{{ item.title_uk }}</b>{% else %} {{ item.title_uk }} {% endif %} {% endif %}</td>
+                        <td class="column-2">
+                            {{ item.text }}
+                        </td>
+                        <td class="column-3">{% if this.page.id == 'prejskurant-kiev' %} {% if item.price_kiev_1 >= 1 %} {{ item.price_kiev_1 }} {% endif %}{% endif %} {% if this.page.id == 'prejskurant-kiyiv' %} {% if item.price_kiev_1 >= 1 %} {{ item.price_kiev_1 }} {% endif %} {% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-container hidden" id="modal-g">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3>{{ 'Отдельные услуги' |_ }}</h3>
+                <img src={{"/assets/img/prejskurant-page/7price-add-400.jpg"|theme }} alt="add">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-7" class="tablepress">
+
+                    {% partial 'thead' %}
+
+                    <tbody>
+                    {% for item in others.getOthers%}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">{% if activeLocale == 'ru' %} {% if item.parent_id == 10 %}<b style="margin-left: -15px!important;">{{ item.title_ru }}</b>{% else %} {{ item.title_ru }} {% endif %} {% endif %} {% if activeLocale == 'uk' %} {% if item.parent_id == 10 %}<b style="margin-left: -15px!important;">{{ item.title_uk }}</b>{% else %} {{ item.title_uk }} {% endif %} {% endif %}</td>
+                        <td class="column-2">
+                            {{ item.text }}
+                        </td>
+                        <td class="column-3">{% if this.page.id == 'prejskurant-kiev' %} {% if item.price_kiev_1 >= 1 %} {{ item.price_kiev_1 }} {% endif %}{% endif %} {% if this.page.id == 'prejskurant-kiyiv' %} {% if item.price_kiev_1 >= 1 %} {{ item.price_kiev_1 | number_format(0, '', ' ' ) }} {% endif %} {% endif %}</td>
+                        <td class="column-4">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_2 >= 1 %}{{ item.price_kiev_2 }}{% endif %}{% endif %}</td>
+                        <td class="column-5">{% if this.page.id == 'prejskurant-kiev' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 }}{% endif %}{% endif %}{% if this.page.id == 'prejskurant-kiyiv' %}{% if item.price_kiev_3 >= 1 %}{{ item.price_kiev_3 }}{% endif %}{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-container hidden" id="modal-j">
+    <div class="pre-popup">
+        <button type="button" class="btn-close">×</button>
+        <div class="pre-popup__content">
+            <div class="pre-popup__photo">
+                <h3>{{ 'Скидки и наценки' |_ }}</h3>
+                <img src={{"/assets/img/prejskurant-page/8price-sale-400.jpg"|theme }} alt="sale">
+            </div>
+            <div class="pre-popup__table">
+                <table id="tablepress-8" class="tablepress">
+
+                    <tbody>
+                    {% for item in discounts.getDiscounts%}
+                    <tr class="row-2" role="row">
+                        <td class="column-1">
+                        
+                        {% if activeLocale == 'ru' %} 
+                            {% if item.cat_parent_id == 104 %}
+                                <div class="dotted" style="margin-left: -15px!important;">
+                                {{ item.title_ru }}
+                                <div class="tab-mes">{{ 'кроме кожи и меха' |_ }}</div>
+                                </div>
+                            {% elseif item.parent_id == 10 %} 
+                                <p style="margin-left: -15px!important;">
+                                {{ item.title_ru }}</p>
+                            {% else %}    
+                                {{ item.title_ru }} 
+                            {% endif %} 
+                        {% endif %} 
+                        {% if activeLocale == 'uk' %} 
+                            {% if item.cat_parent_id == 104 %}
+                                <div class="dotted" style="margin-left: -15px!important;">
+                                {{ item.title_uk }}
+                                <div class="tab-mes">{{ 'кроме кожи и меха' |_ }}</div>
+                                </div>
+                            {% elseif item.parent_id == 10 %} 
+                                <p style="margin-left: -15px!important;">
+                                {{ item.title_uk }}</p>
+                            {% else %}    
+                                {{ item.title_uk }} 
+                            {% endif %} 
+                        {% endif %}
+                        
+                        </td>
+                        <td class="column-4">{% if this.page.id == 'prejskurant-kiev' %} {% if item.price_kiev_1 >= 1 %} {{ item.price_kiev_1 }} {% endif %}{% endif %} {% if this.page.id == 'prejskurant-kiyiv' %} {% if item.price_kiev_1 >= 1 %} {{ item.price_kiev_1 }} {% endif %} {% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+title = "Контакты | Химчистка LaVanda"
+url = "/kontakty"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeTitle[uk] = "Контакти | Хімчистка LaVanda"
+localeUrl[uk] = "/kontakti"
+==
+<section class="main" style='background-image: url({{"/assets/img/kontakty-page/bg-kontakti.jpg"|theme }})'>
+    <div class="container">
+        <div class="main__content">
+            <div class="main__inner" style='background-image: url({{"/assets/img/flowers-bg-01.png"|theme }})' data-aos="zoom-in" data-aos-duration="1500">
+                <a href="{{ 'main'|page }}">
+                    <img class="logo-head" src={{"/assets/img/logo.svg"|theme }} alt="logo">
+                </a>
+                <h1>{{ 'КОНТАКТЫ' |_ }}</h1>
+                
+                {% partial 'modal-btn' %}
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contacts">
+    <div class="contacts__text" data-aos="fade-down" data-aos-duration="1000">
+        <p>{{ 'Для Вашего удобства у нас работают <span>единые для всех салонов</span> телефонная линия <br> и почтовый ящик, обращайтесь по всем вопросам' |_ }}</p>
+        <a href="tel:+380674000707">
+            <i class="fas fa-phone-alt"></i>
+            &nbsp;067 400 07 07</a>
+        <a href="mailto:info@lavanda.net.ua">
+            <i class="fas fa-envelope"></i>
+            &nbsp;info@lavanda.net.ua</a>
+    </div>
+    <div class="contacts__map reverse" id="kiev">
+        <div class="contacts__map--box">
+            <iframe src="https://snazzymaps.com/embed/320255" width="100%" height="100%" style="border:none;"></iframe>
+        </div>
+        <div class="contacts__map--text" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="300">
+            <h3>{{ 'Киев' |_ }}</h3>
+            <div class="address">
+                <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                {{ 'ул. Демеевская, 31<br>(ЖК «Park Avenue»)' |_ }}</div>
+            <div class="contacts-times"><span>Пн-Пт</span> {{ 'с' |_ }} {% component 'contenteditor' fixture="p" tools="" class="" file="times/kiev-times-mn-fr.htm" %} <br> <span>{{ 'Сб-Вс' |_ }}</span> {{ 'с' |_ }} {% component 'contenteditor' fixture="p" tools="" class="" file="times/kiev-times-st-sn.htm" %}</div>
+        </div>
+    </div>
+    <div class="contacts__map" id="zaporozhe">
+        <div class="contacts__map--text" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="300">
+            <h3>{{ 'Запорожье' |_ }}</h3>
+            <div class="address">
+                <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                {{ 'ул. Лобановского, 12' |_ }}</div>
+            <div class="contacts-times"><span>Пн-Пт</span> {{ 'с' |_ }} {% component 'contenteditor' fixture="p" tools="" class="" file="times/zaporozhe-times-mn-fr.htm" %} <br> <span>{{ 'Сб-Вс' |_ }}</span> {{ 'с' |_ }} {% component 'contenteditor' fixture="p" tools="" class="" file="times/zaporozhe-times-st-sn.htm" %}</div>
+        </div>
+        <div class="contacts__map--box">
+            <iframe src="https://snazzymaps.com/embed/320255" width="100%" height="100%" style="border:none;"></iframe>
+        </div>
+    </div>
+    <div class="contacts__map reverse" id="energodar">
+        <div class="contacts__map--box">
+            <iframe src="https://snazzymaps.com/embed/320255" width="100%" height="100%" style="border:none;"></iframe>
+        </div>
+        <div class="contacts__map--text" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="300">
+            <h3>{{ 'Энергодар' |_ }}</h3>
+            <div class="address">
+                <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                {{ 'пр-т. Строителей, 46' |_ }}</div>
+            <div class="contacts-times"><span>Пн-Пт</span> {{ 'с' |_ }} {% component 'contenteditor' fixture="p" tools="" class="" file="times/energodar-times-mn-fr.htm" %} <br> <span>Сб</span> {{ 'с' |_ }} {% component 'contenteditor' fixture="p" tools="" class="" file="times/energodar-times-st.htm" %} <br> <span>{{ 'Вс' |_ }}</span> {% component 'contenteditor' fixture="p" tools="" class="" file="times/energodar-times-sn.htm" %}</div>
+        </div>
+    </div>
+    <section class="contacts__img">
+        <img src={{"/assets/img/kontakty-page/1-lavanda-fas.jpg"|theme }} alt="lavanda">
+    </section>
+</section>

@@ -1,0 +1,47 @@
+columns:
+    title_ru:
+        label: назв_ру
+        type: text
+        searchable: true
+        sortable: true
+    title_uk:
+        label: назв_укр
+        type: text
+        searchable: true
+        sortable: true
+    price_kiev_1:
+        label: цена_киев_Текстиль
+        type: number
+        sortable: true
+    price_kiev_2:
+        label: цена_киев_Шелк
+        type: number
+        sortable: true
+    price_kiev_3:
+        label: цена_киев_Кож/Мех
+        type: number
+        sortable: true
+    price_zaporozhe_1:
+        label: цена_запрж_Текстиль
+        type: number
+        sortable: true
+    price_zaporozhe_2:
+        label: цена_запрж_Шелк
+        type: number
+        sortable: true
+    price_zaporozhe_3:
+        label: цена_запрж_Кож/Мех
+        type: number
+        sortable: true
+    price_energodar_1:
+        label: цена_енергдр_Текстиль
+        type: number
+        sortable: true
+    price_energodar_2:
+        label: цена_енергдр_Шелк
+        type: number
+        sortable: true
+    price_energodar_3:
+        label: цена_енергдр_Кож/Мех
+        type: number
+        sortable: true

@@ -1,0 +1,209 @@
+title = "Химчистка LaVanda"
+url = "/"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeTitle[uk] = "Хімчистка LaVanda"
+==
+<section class="main" style='background-image: url({{"/assets/img/main-page/hero-bg.jpg"|theme }})'>
+    <div class="container">
+        <div class="main__content">
+            <div class="main__inner" style='background-image: url({{"/assets/img/flowers-bg-01.png"|theme }})' data-aos="zoom-in" data-aos-duration="1500">
+                <a href="{{ 'main'|page }}">
+                    <img class="logo-head" src={{"/assets/img/logo.svg"|theme }} alt="logo">
+                </a>
+                <h1>{{ 'СОВРЕМЕННЫЕ ТЕХНОЛОГИИ ХИМЧИСТКИ' |_}}</h1>
+                
+                {% partial 'modal-btn' %}
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container-min">
+        <div class="about__text" data-aos="fade-down" data-aos-duration="1000">
+            <h2>{{ 'ЧЕМ МЫ ЗАНИМАЕМСЯ' |_}}</h2>
+            
+            {% content 'translate-text/main-page-about-section-text' %}
+            
+            &nbsp;<a href="{{ 'servisy'|page }}">{{ 'Читать больше' |_}}</a>
+        </div>
+        <div class="about__content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="about__content--box">
+                <img src={{"/assets/img/main-page/about/1-himchistka.svg"|theme }} alt="himchistka">
+                <h4>{{ 'Химчистка' |_}}</h4>
+            </div>
+            <div class="about__content--box">
+                <img src={{"/assets/img/main-page/about/2-prannya.svg"|theme }} alt="prannya">
+                <h4>{{ 'Аква-чистка и глажение' |_}}</h4>
+            </div>
+            <div class="about__content--box">
+                <img src={{"/assets/img/main-page/about/3-shkira-hutro.svg"|theme }} alt="shkira-hutro">
+                <h4>{{ 'Чистка кожи и меха' |_}}</h4>
+            </div>
+            <div class="about__content--box">
+                <img src={{"/assets/img/main-page/about/4-sumki.svg"|theme }} alt="sumki">
+                <h4>{{ 'Реставрация и тонирование сумок и обуви' |_}}</h4>
+            </div>
+            <div class="about__content--box">
+                <img src={{"/assets/img/main-page/about/5-atelie.svg"|theme }} alt="atelie">
+                <h4>{{ 'Услуги ателье: ремонт и коррекция одежды' |_}}</h4>
+            </div>
+            <div class="about__content--box">
+                <img src={{"/assets/img/main-page/about/6-dostavka.svg"|theme }} alt="dostavka">
+                <h4>{{ 'Доставка заказов' |_}}</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="details parallaxie" style='background-image: url({{"/assets/img/main-page/details/bg-lavanda.jpg"|theme }})'>
+    <div class="container">
+        <div class="details__outer">
+            <div class="details__inner" data-aos="zoom-in-up" data-aos-duration="1000">
+                <h2 data-scroll>{{ 'МЫ ЗАБОТИМСЯ О ВАШИХ ВЕЩАХ <br> С ВНИМАНИЕМ К ДЕТАЛЯМ' |_}}</h2>
+                <a href="{{ 'servisy'|page }}" class="details__inner--button">{{ 'ЧИТАТЬ БОЛЬШЕ ПРО СЕРВИСЫ' |_}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rates">
+    <div class="container-min">
+        <div class="rates__text" data-aos="fade-down" data-aos-duration="1000">
+            <h2>{{ 'ПОЧЕМУ У НАС НАИЛУЧШИЕ ТАРИФЫ' |_}}</h2>
+            <p>{{ 'Потому, что учитывая все Ваши потребности, мы предоставляем первоклассный сервис с идеальным сочетанием цены и качества' |_}}.&nbsp;
+                <a href="{{ 'prejskurant'|page }}">{{ 'Читать больше' |_}}</a></p>
+        </div>
+        <div class="rates__content">
+            <div class="rates__content--box">
+                <h4>{{ 'Индивидуальная аква-чистка <br> белья с использованием профессиональных средств' |_}}</h4>
+                <p>{{ 'от' |_}}
+                    <span class='numscroller' data-min='1' data-max='500' data-delay='5' data-increment='3'>500</span>
+                    грн / 10кг</p>
+            </div>
+            <div class="rates__content--box">
+                <h4>{{ 'Ручная чистка <br> деликатных вещей' |_}}</h4>
+                <p>{{ 'от' |_}}
+                    <span class='numscroller' data-min='1' data-max='400' data-delay='5' data-increment='4'>400</span>
+                    грн / шт</p>
+            </div>
+            <div class="rates__content--box" data-aos="zoom-out-left" data-aos-duration="800">
+                <h4>{{ 'Доставка заказов <br> на сумму более 1500 грн' |_}}</h4>
+                <p><span class="free">{{ 'БЕСПЛАТНО' |_}}</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bonus">
+    <div class="container-min">
+        <div class="bonus__text" data-aos="fade-down" data-aos-duration="1000">
+            <h2>{{ 'ЕСТЬ ЛИ У НАС БОНУСНАЯ ПРОГРАММА' |_}}</h2>
+            <p>{{ 'Поскольку более всего мы ценим доверие и лояльность клиентов, мы создали бонусную программу, чтобы Вам хотелось возвращаться к нам снова и снова.' |_}}&nbsp;
+                <a href="{{ 'bonusnaya-programma'|page }}">{{ 'Читать больше' |_}}</a>
+                </p>
+        </div>
+        <div class="bonus__content">
+            <div class="bonus__content--box">
+                <img src={{"/assets/img/main-page/bonus/bonus-cards.png"|theme }} alt="bonus-cards">
+            </div>
+            <div class="bonus__content--box">
+                <h4>{{ 'Экономьте на заказах <br> с бонусной программой LaVanda' |_}}</h4>
+                <p>до <span class='numscroller' data-min='1' data-max='20' data-delay='1' data-increment='1'>20</span><span>%</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="location">
+    <h2 data-aos="fade-down" data-aos-duration="1000">{{ 'КАК НАС НАЙТИ' |_}}</h2>
+    <div class="google-map-wrapper">
+        <iframe src="https://snazzymaps.com/embed/320255" width="100%" height="100%" style="border:none;"></iframe>
+    </div>
+        <div class="location__content">
+            <div class="location__content--box" data-aos="fade-right" data-aos-duration="1000">
+                <h3>{{ 'САЛОНЫ' |_}}</h3>
+                <a href="{{ 'kontakty'|page }}#kiev" title="Найти в КИЕВЕ" class="loc-link">
+                    <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                    <p>{{ 'Киев' |_}}</p>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="{{ 'kontakty'|page }}#zaporozhe" title="Найти в ЗАПОРОЖЬЕ" class="loc-link">
+                    <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                    <p>{{ 'Запорожье' |_}}</p>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="{{ 'kontakty'|page }}#energodar" title="Найти в ЭНЕРГОДАРЕ" class="loc-link">
+                    <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                    <p>{{ 'Энергодар' |_}}</p>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="location__content--box" data-aos="zoom-in" data-aos-duration="1000">
+                <h3><span class="title-loc-dnone">{{ 'САЛОНЫ И' |_}} </span>{{ 'ГРАФИК РАБОТЫ' |_}}</h3>
+                <div class="box-text">
+                
+                    <a href="{{ 'kontakty'|page }}#kiev" title="Найти в КИЕВЕ" class="loc-link loc-dnone">
+                        <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                        <p>{{ 'Киев' |_}}</p>
+                    </a>
+                    
+                    <div class="box-text__times"><b>Пн-Пт </b>{{ 'с' |_}} {% component 'contenteditor' fixture="p" tools="" class="" file="times/kiev-times-mn-fr.htm" %} <b>{{ 'Сб-Вс' |_}}&nbsp;</b>{{ 'с' |_}} {% component 'contenteditor' fixture="p" tools="" class="" file="times/kiev-times-st-sn.htm" %}</div>
+                    
+                    <a href="{{ 'kontakty'|page }}#zaporozhe" title="Найти в ЗАПОРОЖЬЕ" class="loc-link loc-dnone">
+                        <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                        <p>{{ 'Запорожье' |_}}</p>
+                    </a>
+                    
+                    <div class="box-text__times"><b>Пн-Пт </b>{{ 'с' |_}} {% component 'contenteditor' fixture="p" tools="" class="" file="times/zaporozhe-times-mn-fr.htm" %} <b>{{ 'Сб-Вс' |_}}&nbsp;</b>{{ 'с' |_}} {% component 'contenteditor' fixture="p" tools="" class="" file="times/zaporozhe-times-st-sn.htm" %}</div>
+                    
+                    <a href="{{ 'kontakty'|page }}#energodar" title="Найти в ЭНЕРГОДАРЕ" class="loc-link loc-dnone">
+                        <img src={{"/assets/img/mark-a.png"|theme }} alt="icon">
+                        <p>{{ 'Энергодар' |_}}</p>
+                    </a>
+                    
+                    <div class="box-text__times"><b>Пн-Пт </b>{{ 'с' |_}} {% component 'contenteditor' fixture="p" tools="" class="" file="times/energodar-times-mn-fr.htm" %} <b>Сб </b>{{ 'с' |_}} {% component 'contenteditor' fixture="p" tools="" class="" file="times/energodar-times-st.htm" %} <br> <b>{{ 'Вс' |_}}&nbsp;</b>{% component 'contenteditor' fixture="p" tools="" class="" file="times/energodar-times-sn.htm" %} </div>
+                    
+                </div>
+            </div>
+            <div class="location__content--box" data-aos="fade-left" data-aos-duration="1000">
+                <h3>{{ 'КОНТАКТЫ' |_}}</h3>
+                <div class="box-contacts">
+                    <p>{{ 'Для Вашего удобства у нас работает единая для всех салонов телефонная линия и почтовый ящик, обращайтесь по всем вопросам' |_}}</p>
+                    <p>
+                        <a href="tel:+380674000707">
+                            <i class="fas fa-phone-alt"></i>
+                            &nbsp;067 400 07 07</a>
+                    </p>
+                    <p>
+                        <a href="mailto:info@lavanda.net.ua">
+                            <i class="fas fa-envelope"></i>
+                            &nbsp;info@lavanda.net.ua</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="photo">
+    <div class="photo__content">
+        <div class="photo__box">
+            <img src={{"/assets/img/main-page/photo/inter-1.jpg"|theme }} alt="inter">
+            <img src={{"/assets/img/main-page/photo/ph-rys-on.jpg"|theme }} alt="inter">
+        </div>
+        <div class="photo__box">
+            <img src={{"/assets/img/main-page/photo/inter-2.jpg"|theme }} alt="inter">
+            <img src={{"/assets/img/main-page/photo/ph-kurtka-on.jpg"|theme }} alt="inter">
+        </div>
+        <div class="photo__box">
+            <img src={{"/assets/img/main-page/photo/inter-3.jpg"|theme }} alt="inter">
+            <img src={{"/assets/img/main-page/photo/ph-yubka-on.jpg"|theme }} alt="inter">
+        </div>
+    </div>
+</section>

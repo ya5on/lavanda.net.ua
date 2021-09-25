@@ -1,0 +1,52 @@
+.photo
+  width: 100%
+  padding-top: 20px
+
+  &__content
+    width: 100%
+    display: flex
+    align-items: normal
+    flex-wrap: wrap
+    +sm(margin, 0 auto)
+
+  &__box
+    +size(4)
+    +size-sm(12)
+    flex: 1 1 auto
+    margin-bottom: 5px
+    transition: all .3s ease-in-out
+    border: 2px solid $white
+    position: relative
+    overflow: hidden
+
+    img
+      margin: 0 auto
+      transition: all .3s ease-in-out
+      text-align: center
+      +sm(width, 642px)
+
+      &:first-child
+        opacity: 1
+
+      &:last-child
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        transform: scale(1.2)
+        z-index: -1
+        transition: all .3s ease-in-out
+        opacity: 0
+        +sm(margin, 0 auto)
+
+
+    &:hover > img:last-child
+      transition: all .3s ease-in-out
+      transform: scale(1)
+      opacity: 1
+
+    &:hover > img:first-child
+      transition: all .3s ease-in-out
+      opacity: 0
+      transform: scale(1.1)

@@ -1,0 +1,100 @@
+title = "Сервисы | Химчистка LaVanda"
+url = "/servisy"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeTitle[uk] = "Сервіси | Хімчистка LaVanda"
+localeUrl[uk] = "/servisi"
+==
+<section class="main" style='background-image: url({{"/assets/img/servisy-page/bg-servisy.jpg"|theme }})'>
+    <div class="container">
+        <div class="main__content">
+            <div class="main__inner" style='background-image: url({{"/assets/img/flowers-bg-01.png"|theme }})' data-aos="zoom-in" data-aos-duration="1500">
+                <a href="{{ 'main'|page }}">
+                    <img class="logo-head" src={{"/assets/img/logo.svg"|theme }} alt="logo">
+                </a>
+                <h1>{{ 'СЕРВИСЫ' |_ }}</h1>
+                
+                {% partial 'modal-btn' %}
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="flowers">
+    <div class="container-min">
+        <div class="flowers__content" data-aos="fade-right" data-aos-duration="1000">
+            <div class="flowers__content--image">
+                <img src={{"/assets/img/servisy-page/flowers-2.jpg"|theme }} alt="flowers">
+            </div>
+            <div class="flowers__content--text">
+                
+                {% content 'translate-text/servisy-page-flowers-section-text' %}
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-about">
+    <p class="service-about__title" data-aos="fade-up" data-aos-duration="1000">{{ 'Главное для нас – это Ваше удовлетворение от получения <br>
+        прекрасной вещи!' |_ }}</p>
+    <div class="service-about__content">
+        <div class="service-about__content--box" data-aos="fade-up" data-aos-duration="1100">
+            <img src={{"/assets/img/servisy-page/himchistka.jpg"|theme }} alt="himchistka">
+            <div class="hidden-text">
+                <h2>{{ 'ХИМЧИСТКА <br> LAVANDA' |_ }}</h2>
+                
+                {% content 'translate-text/servisy-page-about-content-text-1' %}
+                
+            </div>
+        </div>
+        <div class="service-about__content--box" data-aos="fade-down" data-aos-duration="1000">
+            <img src={{"/assets/img/servisy-page/stirka.jpg"|theme }} alt="stirka">
+            <div class="hidden-text">
+                <h2>{{ 'АКВА-ЧИСТКА <br> И ГЛАЖЕНИЕ' |_ }}</h2>
+                
+                {% content 'translate-text/servisy-page-about-content-text-2' %}
+                
+            </div>
+        </div>
+        <div class="service-about__content--box" data-aos="fade-up" data-aos-duration="1100">
+            <img src={{"/assets/img/servisy-page/meh.jpg"|theme }} alt="meh">
+            <div class="hidden-text">
+                <h2>{{ 'ЧИСТКА КОЖИ <br> И МЕХА' |_ }}</h2>
+                
+                {% content 'translate-text/servisy-page-about-content-text-3' %}
+                
+            </div>
+        </div>
+        <div class="service-about__content--box" data-aos="fade-down" data-aos-duration="1100">
+            <img src={{"/assets/img/servisy-page/obuv-2.png"|theme }} alt="obuv">
+            <div class="hidden-text">
+                <h2>{{ 'РЕСТАВРАЦИЯ И ТОНИРОВАНИЕ <br> СУМОК И ОБУВИ' |_ }}</h2>
+                
+                {% content 'translate-text/servisy-page-about-content-text-4' %}
+                
+            </div>
+        </div>
+        <div class="service-about__content--box" data-aos="fade-up" data-aos-duration="1000">
+            <img src={{"/assets/img/servisy-page/atelie.jpg"|theme }} alt="atelie">
+            <div class="hidden-text">
+                <h2>{{ 'УСЛУГИ АТЕЛЬЕ: <br> РЕМОНТ И КОРРЕКЦИЯ ОДЕЖДЫ' |_ }}</h2>
+                
+                {% content 'translate-text/servisy-page-about-content-text-5' %}
+                
+            </div>
+        </div>
+        <div class="service-about__content--box" data-aos="fade-down" data-aos-duration="1100">
+            <img src={{"/assets/img/servisy-page/dostavka.png"|theme }} alt="dostavka">
+            <div class="hidden-text">
+                <h2>{{ 'ДОСТАВКА <br> ЗАКАЗОВ' |_ }}</h2>
+                
+                {% content 'translate-text/servisy-page-about-content-text-6' %}
+                
+            </div>
+        </div>
+    </div>
+</section>

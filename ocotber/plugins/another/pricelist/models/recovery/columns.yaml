@@ -1,0 +1,30 @@
+columns:
+    parent_id:
+        label: par_id
+    cat_parent_id:
+        label: cat_id
+    title_ru:
+        label: назв_ру
+        type: text
+        searchable: true
+        sortable: true
+    title_uk:
+        label: назв_укр
+        type: text
+        searchable: true
+        sortable: true
+    text:
+        label: вес, размер
+    price_kiev_1:
+        label: цена_киев
+        type: number
+        sortable: true
+    price_zaporozhe_1:
+        label: цена_запорожье
+        type: number
+        sortable: true
+    price_energodar_1:
+        label: цена_енергодар
+        type: number
+        sortable: true
+

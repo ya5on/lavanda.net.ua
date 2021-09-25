@@ -1,0 +1,4 @@
+title: Shoes
+modelClass: Another\PriceList\Models\Shoes
+toolbar:
+    buttons: reorder_toolbar

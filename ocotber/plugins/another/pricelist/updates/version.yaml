@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table another_pricelist_1'
+    - builder_table_create_another_pricelist_1.php
+1.0.3:
+    - 'Created table another_pricelist_2'
+    - builder_table_create_another_pricelist_2.php
+1.0.4:
+    - 'Updated table another_pricelist_2'
+    - builder_table_update_another_pricelist_2.php
+1.0.5:
+    - 'Updated table another_pricelist_2'
+    - builder_table_update_another_pricelist_2_2.php

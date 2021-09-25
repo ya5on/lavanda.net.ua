@@ -1,0 +1,25 @@
+title = "Прейскурант | Химчистка LaVanda"
+url = "/prejskurant"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeTitle[uk] = "Прейскурант | Хімчистка LaVanda"
+localeUrl[uk] = "/prejskurant-2"
+==
+<section class="catalog" style='background-image: url({{"/assets/img/prejskurant-page/bg-price.jpg"|theme }})'>
+    <div class="catalog__content">
+        <h2 data-aos="fade-up" data-aos-duration="1000">{{ 'ВЫБЕРИТЕ ВАШ ГОРОД' |_ }}</h2>
+        <div class="catalog__btns" data-aos="fade-down" data-aos-duration="1000">
+            <a href="{{ 'prejskurant-kiev'|page }}">
+                <span>{{ 'КИЕВ' |_ }}</span>
+            </a>
+            <a href="{{ 'prejskurant-zaporozhe'|page }}">
+                <span>{{ 'ЗАПОРОЖЬЕ' |_ }}</span>
+            </a>
+            <a href="{{ 'prejskurant-energodar'|page }}">
+                <span>{{ 'ЭНЕРГОДАР' |_ }}</span>
+            </a>
+        </div>
+    </div>
+</section>

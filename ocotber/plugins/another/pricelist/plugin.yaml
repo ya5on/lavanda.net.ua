@@ -1,0 +1,48 @@
+plugin:
+    name: 'another.pricelist::lang.plugin.name'
+    description: 'another.pricelist::lang.plugin.description'
+    author: another-one
+    icon: oc-icon-list-alt
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Прайслист
+        url: another/pricelist/clothes
+        icon: icon-list-alt
+        sideMenu:
+            side-menu-item:
+                label: 'Чистка одежды'
+                url: another/pricelist/clothes
+                icon: icon-code
+            side-menu-item2:
+                label: 'Чистка обуви'
+                url: another/pricelist/shoes
+                icon: icon-slideshare
+            side-menu-item3:
+                label: 'Чистка сумок'
+                url: another/pricelist/bags
+                icon: icon-suitcase
+            side-menu-item4:
+                label: 'Чистка аксессуаров'
+                url: another/pricelist/accessories
+                icon: icon-chain
+            side-menu-item5:
+                label: 'Чистка домашнего текстиля'
+                url: another/pricelist/hometextiles
+                icon: icon-home
+            side-menu-item6:
+                label: 'Реставрация и ремонт'
+                url: another/pricelist/recovery
+                icon: icon-recycle
+            side-menu-item7:
+                label: 'Отдельные услуги'
+                url: another/pricelist/others
+                icon: icon-wechat
+            side-menu-item8:
+                label: 'Скидки и наценки'
+                url: another/pricelist/discounts
+                icon: icon-smile-o
+    main-menu-item2:
+        label: 'Цены %'
+        url: another/pricelist/priceedits
+        icon: icon-edit

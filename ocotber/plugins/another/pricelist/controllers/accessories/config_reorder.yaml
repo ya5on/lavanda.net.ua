@@ -1,0 +1,4 @@
+title: Accessories
+modelClass: Another\PriceList\Models\Accessories
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,4 @@
+title: PriceEdits
+modelClass: Another\PriceList\Models\PriceEdits
+toolbar:
+    buttons: reorder_toolbar

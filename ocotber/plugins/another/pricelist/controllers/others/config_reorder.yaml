@@ -1,0 +1,4 @@
+title: Others
+modelClass: Another\PriceList\Models\Others
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,76 @@
+==
+<!-- header -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__row">
+            <ul class="header__lang">
+                <div class="header__menu-btn">
+                    <button class="side-menu-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <li class="">
+                    <a href="#" data-request="onSwitchlocale" data-request-data="locale: 'ru'" {% if activeLocale == 'ru' %}class="header__lang--active"{% endif %}>ру</a>
+                </li>
+                <li class="">
+                    <a href="#" data-request="onSwitchlocale" data-request-data="locale: 'uk'" {% if activeLocale == 'uk' %}class="header__lang--active"{% endif %}>укр</a>
+                </li>
+            </ul>
+            <ul class="header__phone">
+                <li class="phone">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+380674000707">+38 067 400 0707</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--  aside menu  -->
+    <div class="header__side-menu">
+        <button type="button" class="btn-close" title="Close">×</button>
+        <nav class="header__nav">
+            <div class="header__nav--logo">
+                <img src={{"/assets/img/logo.svg"|theme }} alt="logo">
+            </div>
+            <ul class="header__menu">
+                <li><a href="{{ 'main'|page }}" {% if this.page.id == 'main' %}class="active"{% endif %}>{{ 'ГЛАВНАЯ' |_}}</a></li>
+                <li><a href="{{ 'servisy'|page }}" {% if this.page.id == 'servisy' %}class="active"{% endif %}>{{ 'СЕРВИСЫ' |_}}</a></li>
+                <li class="relative">
+                    <a href="{{ 'prejskurant'|page }}" {% if this.page.id == 'prejskurant' %}class="active"{% endif %}>{{ 'ПРЕЙСКУРАНТ' |_}}</a>
+                    <button class="header__sub-menu--btn">
+                        <span class="btn-plus"></span>
+                    </button>
+                    <ul class="header__sub-menu">
+                        <li class="header__sub-menu--item">
+                            <a href="{{ 'prejskurant-kiev'|page }}" {% if this.page.id == 'prejskurant-kiev' %}class="active"{% endif %}>{{ 'Киев' |_}}</a>
+                        </li>
+                        <li class="header__sub-menu--item">
+                            <a href="{{ 'prejskurant-zaporozhe'|page }}" {% if this.page.id == 'prejskurant-zaporozhe' %}class="active"{% endif %}>{{ 'Запорожье' |_}}</a>
+                        </li>
+                        <li class="header__sub-menu--item">
+                            <a href="{{ 'prejskurant-energodar'|page }}" {% if this.page.id == 'prejskurant-energodar' %}class="active"{% endif %}>{{ 'Энергодар' |_}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="{{ 'bonusnaya-programma'|page }}" {% if this.page.id == 'bonusnaya-programma' %}class="active"{% endif %}>{{ 'БОНУСНАЯ ПРОГРАММА' |_}}</a></li>
+                <li><a href="{{ 'kontakty'|page }}" {% if this.page.id == 'kontakty' %}class="active"{% endif %}>{{ 'КОНТАКТЫ' |_}}</a></li>
+            </ul>
+            <ul class="header__social">
+                <li class="facebook">
+                    <a target="_blank" href="https://www.facebook.com/LaVandaPerfect" title="Facebook">
+                        <img src={{"/assets/img/facebook.png"|theme }} alt="facebook">
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a target="_blank" href="https://www.instagram.com/lavandaperfect/" title="Instagram">
+                        <img src={{"/assets/img/instagram.png"|theme }} alt="instagram">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay hidden"></div>
+    <!--  //aside menu  -->
+</header>
+<!-- //header -->

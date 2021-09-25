@@ -1,0 +1,10 @@
+name: PriceEdits
+form: $/another/pricelist/models/priceedits/fields.yaml
+modelClass: Another\PriceList\Models\PriceEdits
+defaultRedirect: another/pricelist/priceedits
+create:
+    redirect: 'another/pricelist/priceedits/update/:id'
+    redirectClose: another/pricelist/priceedits
+update:
+    redirect: another/pricelist/priceedits
+    redirectClose: another/pricelist/priceedits

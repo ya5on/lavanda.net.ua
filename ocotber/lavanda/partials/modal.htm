@@ -1,0 +1,34 @@
+==
+<!--modal-->
+<div class="modal mfp-hide" id="modal">
+    <div class="form-block" role="dialog" tabindex="-1">
+        <h3>{{ 'Я ХОЧУ ЗАКАЗАТЬ КУРЬЕРА' |_}}</h3>
+        <p>{{ 'Оставьте Ваши контактные данные и наш менеджер свяжется с Вами в ближайшее время для уточнения деталей
+            заказа' |_}}</p>
+        <p><span>{{ 'Бесплатный выезд при заказе от 1 500 грн' |_}}</span></p>
+                <form class="form" action="#">
+                    <input type="hidden" name="whatform" value="Call-courier" />
+                    <div class="msg"></div>
+                    <div class="form__content">
+                        <div class="form__left">
+                            <input class="" type="text" name="name" value="" size="40" placeholder="{{ 'Ваши ФИО' |_}} *">
+                            <select class="" name="select">
+                                <option selected disabled value="{{ 'Выберите Ваш город' |_}} *">{{ 'Выберите Ваш город' |_}}*</option>
+                                <option value="Киев">{{ 'Киев' |_}}</option>
+                                <option value="Запорожье">{{ 'Запорожье' |_}}</option>
+                                <option value="Энергодар">{{ 'Энергодар' |_}}</option>
+                            </select>
+                            <input class="phone-number" type="tel" name="tel" value="" size="40" placeholder="Ваш телефон *">
+                            <input class="" type="email" name="email" value="" size="40" placeholder="Ваш email">
+                        </div>
+                        <div class="form__right">
+                            <textarea class="" name="your-message" cols="40" rows="10" placeholder="{{ 'Краткое описание вещей' |_}}"></textarea>
+                        </div>
+                    </div>
+                    <div class="div-button">
+                        <button type="submit" value="ОТПРАВИТЬ ЗАЯВКУ" class="submit-btn">{{ 'ОТПРАВИТЬ ЗАЯВКУ' |_}}</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>

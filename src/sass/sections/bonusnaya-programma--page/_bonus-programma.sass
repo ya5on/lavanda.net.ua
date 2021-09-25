@@ -1,0 +1,137 @@
+.bonus-programma
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  p
+    margin: 0 0 15px
+    text-align: left
+    font-size: 1.1em
+    line-height: 2.0em
+    +md(font-size, 1em)
+    +xs(font-size, .9em)
+    +xs(text-align, justify)
+
+    span
+      font-weight: 700
+
+  &__text
+    +col
+    +size(8)
+    +size-md(10)
+    +size-sm(11)
+    padding: 6vh 0 0 0
+
+
+  &__more-orders
+    +col
+    +size(8)
+    +size-md(10)
+    +size-sm(11)
+    margin-top: 30px
+    +sm(margin-top, 16px)
+
+  h4
+    text-align: center
+    font-size: 1.8em
+    line-height: 1.4em
+    margin-bottom: 6%
+    font-weight: 400
+    +md(font-size, 1.5em)
+    +xs(font-size, 1.3em)
+
+    &:before
+      content: ''
+      background-color: $pink
+      transition: all .3s ease-in-out
+      display: block
+      width: 0
+      margin: 0 auto 10px
+      height: 2px
+
+
+  &__cards
+    width: 100%
+
+    img
+      margin: 30px auto 30px
+      +sm(margin, 15px auto 15px)
+
+  &__discount
+    +col
+    +size(8)
+    +size-md(10)
+    +size-sm(11)
+    display: flex
+    flex-direction: column
+
+    img
+      height: 80px
+      transition: all .3s ease-in-out!important
+
+    &--imgs
+      display: flex
+      justify-content: space-around
+      +sm(flex-direction, column)
+      +sm(flex-direction, column)
+
+      .img-box
+        margin-bottom: 25px
+        +sm(margin, 15px 0)
+
+        &:hover >
+          h4:before
+            width: 100px
+          img
+            transform: translateY(-5px)
+
+        img
+          +sm(margin, 15px auto)
+          height: 135px
+
+        &:first-of-type
+          img
+            height: 125px
+
+        &:last-of-type
+          img
+            height: 145px
+
+        h4
+          margin: 20px 0 0
+
+    p
+      text-align: center
+
+.bonus
+  +sm(background-size, 400%)
+
+  h1
+    +sm(margin-bottom, 5.5vh!important)
+
+
+.spec
+  margin: 15px auto 40px
+
+  img
+    margin-bottom: 25px
+    transition: all .3s ease-in-out!important
+
+  &:after
+    content: ''
+    background-color: $pink
+    transition: all .3s ease-in-out
+    display: block
+    width: 0
+    margin: 0 auto 10px
+    height: 2px
+
+  &:hover:after
+    width: 100px
+
+  &:hover
+    img
+      transform: translateY(-5px)!important
+

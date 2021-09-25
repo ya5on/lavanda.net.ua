@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  parent_id:
+    label: ид родительской категории
+  cat_parent_id:
+    label: ид дочерней категории
+  title_ru:
+    label: Название_рус
+  title_uk:
+    label: Название_укр
+  text:
+    label: вес, размер, габариты
+  price_kiev_1:
+    label: цена_киев_Текстиль
+  price_kiev_2:
+      label: цена_киев_Шелк
+  price_kiev_3:
+    label: цена_киев_Кожа/Мех
+  price_zaporozhe_1:
+    label: цена_запорожье_Текстиль
+  price_zaporozhe_2:
+    label: цена_запорожье_Шелк
+  price_zaporozhe_3:
+    label: цена_запорожье_Кожа/Мех
+  price_energodar_1:
+    label: цена_енергодар_Текстиль
+  price_energodar_2:
+    label: цена_енергодар_Шелк
+  price_energodar_3:
+    label: цена_енергодар_Кожа/Мех
